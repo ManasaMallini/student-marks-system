@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Students</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h2>Students List</h2>
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>ID</th>
+    <th>Total</th>
+    <th>Average</th>
+    <th>Grade</th>
+</tr>
+
+{% for s in students %}
+<tr>
+    <td>{{ s.name }}</td>
+    <td>{{ s.student_id }}</td>
+    <td>{{ s.total }}</td>
+    <td>{{ s.average }}</td>
+    <td>{{ s.grade }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>
